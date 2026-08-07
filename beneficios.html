@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gelys Store - Beneficios y Propuesta de Valor</title>
+    
+    <!-- Meta tags de SEO -->
+    <meta name="description" content="Descubre los beneficios de comprar en Gelys Store: Calidad premium, comodidad y atención personalizada directa por WhatsApp.">
+    <meta name="keywords" content="Gelys Store, beneficios, propuesta de valor, tienda online ropa, Comayagua">
+    
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Hojas de estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header / Navbar de Vidrio -->
+    <header class="glass-header">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <span class="logo-accent">Gelys</span> Store
+            </a>
+            
+            <nav class="main-nav" id="main-nav">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="beneficios.html" class="nav-link active">Beneficios</a>
+                <a href="catalogo.html" class="nav-link">Catálogo</a>
+                <a href="nosotros.html" class="nav-link">Acerca de</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <button id="theme-toggle" class="icon-btn" aria-label="Cambiar tema">
+                    <i data-lucide="moon" class="theme-icon-dark"></i>
+                    <i data-lucide="sun" class="theme-icon-light" style="display: none;"></i>
+                </button>
+                
+                <button id="cart-toggle" class="icon-btn cart-btn" aria-label="Ver pedido">
+                    <i data-lucide="shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                
+                <button id="menu-toggle" class="icon-btn mobile-menu-btn" aria-label="Menú">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección de Beneficios / Valores -->
+    <section id="valores" class="section-padding" style="margin-top: 5.5rem;">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">¿Por qué elegir Gelys Store?</span>
+                <h1 class="section-title" style="font-size: 3rem;">Nuestra propuesta de valor para ti</h1>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="grid-cards-3" style="margin-bottom: 4rem;">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+                    <h3>Calidad Seleccionada</h3>
+                    <p>Cada prenda de nuestro catálogo pasa por un proceso de revisión minucioso para garantizar que luzcas excelente en cualquier ocasión.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i data-lucide="shopping-cart"></i>
+                    </div>
+                    <h3>Compra Cómoda en Línea</h3>
+                    <p>Olvídate del tráfico y el cansancio de buscar tiendas físicas. Explora nuestro catálogo y ordena de forma 100% virtual.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <h3>Atención Personalizada</h3>
+                    <p>Tu compra no es fría ni automática. Te asesoramos directamente por mensajería para resolver dudas y confirmar tallas.</p>
+                </div>
+            </div>
+
+            <!-- Beneficios Extendidos (Nuevos/Visuales) -->
+            <div class="about-grid" style="margin-top: 5rem;">
+                <div class="about-content">
+                    <span class="section-subtitle">Ahorro y Flexibilidad</span>
+                    <h2 class="about-title">Una alternativa práctica para el consumidor moderno</h2>
+                    <p>En Gelys Store eliminamos las barreras físicas tradicionales. Al ser una tienda digital nativa, reducimos los costos operativos de un local físico, permitiéndonos ofrecer prendas de mejor calidad a precios más competitivos y un stock dinámico que se renueva constantemente con las últimas tendencias.</p>
+                    <p>Además, al comprar con nosotros, ahorras tiempo valioso y gastos adicionales en desplazamientos, recibiendo una atención directa, rápida y de absoluta confianza por WhatsApp.</p>
+                    <a href="catalogo.html" class="btn btn-primary" style="margin-top: 1rem;">
+                        <span>Ir al Catálogo de Ropa</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="about-visual">
+                    <div style="background-color: var(--color-primary-soft); border-radius: var(--border-radius-lg); padding: 3rem; text-align: center; border: 1px solid var(--color-border); max-width: 380px;">
+                        <i data-lucide="truck" style="width: 4rem; height: 4rem; color: var(--color-accent); margin-bottom: 1.5rem;"></i>
+                        <h4 style="font-family: var(--font-serif); font-size: 1.4rem; margin-bottom: 0.8rem;">Envíos Coordinados</h4>
+                        <p style="color: var(--color-text-secondary); font-size: 0.95rem; font-weight: 300;">
+                            Coordinamos contigo los puntos de entrega en Comayagua para que recibas tus compras de la forma más rápida y cómoda posible.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sidebar del Carrito de Compras (Drawer común) -->
+    <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer-header">
+            <h3>Tu Pedido</h3>
+            <button id="cart-close" class="icon-btn" aria-label="Cerrar">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+        
+        <div class="cart-drawer-content" id="cart-items-container">
+            <!-- Cargado por JS -->
+        </div>
+        
+        <div class="cart-drawer-footer" id="cart-footer">
+            <div class="cart-summary">
+                <div class="summary-line">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal">L 0.00</span>
+                </div>
+                <div class="summary-line highlight">
+                    <span>Total Estimado</span>
+                    <span id="cart-total">L 0.00</span>
+                </div>
+            </div>
+            
+            <form id="order-form" class="order-form">
+                <div class="form-group">
+                    <label for="client-name">Nombre Completo</label>
+                    <input type="text" id="client-name" required placeholder="Ej. Ana Pérez">
+                </div>
+                <div class="form-group">
+                    <label for="client-location">Dirección o Punto de Entrega en Comayagua</label>
+                    <input type="text" id="client-location" required placeholder="Ej. Frente a Plaza Central">
+                </div>
+                <div class="form-group">
+                    <label for="client-notes">Notas / Tallas / Preferencias (Opcional)</label>
+                    <textarea id="client-notes" placeholder="Ej. Vestido Comayagua en talla M, color azul."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i data-lucide="message-square-plus"></i>
+                    <span>Enviar pedido a WhatsApp</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Contacto / Footer -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo footer-logo">
+                    <span class="logo-accent">Gelys</span> Store
+                </a>
+                <p class="footer-desc">Boutique digital de ropa de alta calidad para damas y caballeros. Estilo, tendencia y comodidad a un solo clic de distancia.</p>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <i data-lucide="facebook"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i data-lucide="instagram"></i>
+                    </a>
+                    <a href="https://wa.me/50499000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                        <i data-lucide="phone"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <a href="index.html">Inicio</a>
+                <a href="beneficios.html">Beneficios</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="nosotros.html">Acerca de nosotros</a>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <p>
+                    <i data-lucide="map-pin"></i>
+                    <span>Comayagua, Honduras</span>
+                </p>
+                <p>
+                    <i data-lucide="mail"></i>
+                    <span>contacto@gelysstore.com</span>
+                </p>
+                <p>
+                    <i data-lucide="phone-call"></i>
+                    <span>+504 9900-0000</span>
+                </p>
+                <p>
+                    <i data-lucide="clock"></i>
+                    <span>Atención: Lun - Sáb, 8:00 AM - 6:00 PM</span>
+                </p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom text-center">
+            <div class="container footer-bottom-container">
+                <p>&copy; 2026 Gelys Store. Todos los derechos reservados. Desarrollado por Yorgely Nohemy Aguilar - Emprende CITE.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cargar Lucide Icons desde CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Script principal de la aplicación -->
+    <script src="app.js"></script>
+</body>
+</html>

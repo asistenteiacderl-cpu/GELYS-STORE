@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gelys Store - Inicio | Moda y Comodidad</title>
+    
+    <!-- Meta tags de SEO -->
+    <meta name="description" content="En Gelys Store encontrarás ropa moderna de alta calidad para damas y caballeros a precios accesibles. Compra desde tu hogar en Comayagua.">
+    <meta name="keywords" content="Gelys Store, boutique digital Comayagua, ropa damas, ropa caballeros, comprar online">
+    
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Hojas de estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header / Navbar de Vidrio -->
+    <header class="glass-header">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <span class="logo-accent">Gelys</span> Store
+            </a>
+            
+            <nav class="main-nav" id="main-nav">
+                <a href="index.html" class="nav-link active">Inicio</a>
+                <a href="beneficios.html" class="nav-link">Beneficios</a>
+                <a href="catalogo.html" class="nav-link">Catálogo</a>
+                <a href="nosotros.html" class="nav-link">Acerca de</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <button id="theme-toggle" class="icon-btn" aria-label="Cambiar tema">
+                    <i data-lucide="moon" class="theme-icon-dark"></i>
+                    <i data-lucide="sun" class="theme-icon-light" style="display: none;"></i>
+                </button>
+                
+                <button id="cart-toggle" class="icon-btn cart-btn" aria-label="Ver pedido">
+                    <i data-lucide="shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                
+                <button id="menu-toggle" class="icon-btn mobile-menu-btn" aria-label="Menú">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Héroe / Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-bg-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-tag">Colección 2026 - Moda al Alcance de Todos</span>
+                <h1 class="hero-title">Estilo sin límites, comodidad sin salir de casa</h1>
+                <p class="hero-subtitle">Prendas seleccionadas con las últimas tendencias de moda para Damas y Caballeros. Calidad premium a precios que se adaptan a ti.</p>
+                <div class="hero-actions">
+                    <a href="catalogo.html" class="btn btn-primary">
+                        <span>Explorar Catálogo</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                    <a href="beneficios.html" class="btn btn-secondary">
+                        <span>Ver Beneficios</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="asymmetric-grid">
+                    <div class="grid-item item-1">
+                        <div class="fallback-img img-dama">
+                            <span class="img-label">Colección Damas</span>
+                        </div>
+                    </div>
+                    <div class="grid-item item-2">
+                        <div class="fallback-img img-caballero">
+                            <span class="img-label">Colección Caballeros</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pre-footer decorativo / Enlaces rápidos a secciones -->
+    <section class="section-padding background-alt text-center">
+        <div class="container">
+            <span class="section-subtitle">Tu Boutique Digital</span>
+            <h2 class="section-title">Encuentra tu próximo estilo</h2>
+            <p style="max-width: 600px; margin: 0 auto 2.5rem; color: var(--color-text-secondary); font-weight: 300;">
+                Explora nuestras colecciones especializadas. Hacemos envíos coordinados directamente en Comayagua.
+            </p>
+            <div class="hero-actions" style="justify-content: center;">
+                <a href="catalogo.html?category=damas" class="btn btn-secondary">Moda Damas</a>
+                <a href="catalogo.html?category=caballeros" class="btn btn-secondary">Moda Caballeros</a>
+                <a href="nosotros.html" class="btn btn-secondary">Nuestra Historia</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sidebar del Carrito de Compras (Drawer común) -->
+    <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer-header">
+            <h3>Tu Pedido</h3>
+            <button id="cart-close" class="icon-btn" aria-label="Cerrar">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+        
+        <div class="cart-drawer-content" id="cart-items-container">
+            <!-- Cargado por JS -->
+        </div>
+        
+        <div class="cart-drawer-footer" id="cart-footer">
+            <div class="cart-summary">
+                <div class="summary-line">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal">L 0.00</span>
+                </div>
+                <div class="summary-line highlight">
+                    <span>Total Estimado</span>
+                    <span id="cart-total">L 0.00</span>
+                </div>
+            </div>
+            
+            <form id="order-form" class="order-form">
+                <div class="form-group">
+                    <label for="client-name">Nombre Completo</label>
+                    <input type="text" id="client-name" required placeholder="Ej. Ana Pérez">
+                </div>
+                <div class="form-group">
+                    <label for="client-location">Dirección o Punto de Entrega en Comayagua</label>
+                    <input type="text" id="client-location" required placeholder="Ej. Frente a Plaza Central">
+                </div>
+                <div class="form-group">
+                    <label for="client-notes">Notas / Tallas / Preferencias (Opcional)</label>
+                    <textarea id="client-notes" placeholder="Ej. Vestido Comayagua en talla M, color azul."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i data-lucide="message-square-plus"></i>
+                    <span>Enviar pedido a WhatsApp</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Contacto / Footer -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo footer-logo">
+                    <span class="logo-accent">Gelys</span> Store
+                </a>
+                <p class="footer-desc">Boutique digital de ropa de alta calidad para damas y caballeros. Estilo, tendencia y comodidad a un solo clic de distancia.</p>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <i data-lucide="facebook"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i data-lucide="instagram"></i>
+                    </a>
+                    <a href="https://wa.me/50499000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                        <i data-lucide="phone"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <a href="index.html">Inicio</a>
+                <a href="beneficios.html">Beneficios</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="nosotros.html">Acerca de nosotros</a>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <p>
+                    <i data-lucide="map-pin"></i>
+                    <span>Comayagua, Honduras</span>
+                </p>
+                <p>
+                    <i data-lucide="mail"></i>
+                    <span>contacto@gelysstore.com</span>
+                </p>
+                <p>
+                    <i data-lucide="phone-call"></i>
+                    <span>+504 9900-0000</span>
+                </p>
+                <p>
+                    <i data-lucide="clock"></i>
+                    <span>Atención: Lun - Sáb, 8:00 AM - 6:00 PM</span>
+                </p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom text-center">
+            <div class="container footer-bottom-container">
+                <p>&copy; 2026 Gelys Store. Todos los derechos reservados. Desarrollado por Yorgely Nohemy Aguilar - Emprende CITE.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cargar Lucide Icons desde CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Script principal de la aplicación -->
+    <script src="app.js"></script>
+</body>
+</html>

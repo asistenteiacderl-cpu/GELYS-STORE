@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gelys Store - Acerca de Nosotros</title>
+    
+    <!-- Meta tags de SEO -->
+    <meta name="description" content="Conoce la historia de Gelys Store, un emprendimiento digital fundado por Yorgely Nohemy Aguilar apoyado por CITE Comayagua y AECID.">
+    <meta name="keywords" content="Acerca de Gelys Store, Yorgely Nohemy Aguilar, CITE Comayagua, Emprende CITE">
+    
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Hojas de estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header / Navbar de Vidrio -->
+    <header class="glass-header">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <span class="logo-accent">Gelys</span> Store
+            </a>
+            
+            <nav class="main-nav" id="main-nav">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="beneficios.html" class="nav-link">Beneficios</a>
+                <a href="catalogo.html" class="nav-link">Catálogo</a>
+                <a href="nosotros.html" class="nav-link active">Acerca de</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <button id="theme-toggle" class="icon-btn" aria-label="Cambiar tema">
+                    <i data-lucide="moon" class="theme-icon-dark"></i>
+                    <i data-lucide="sun" class="theme-icon-light" style="display: none;"></i>
+                </button>
+                
+                <button id="cart-toggle" class="icon-btn cart-btn" aria-label="Ver pedido">
+                    <i data-lucide="shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                
+                <button id="menu-toggle" class="icon-btn mobile-menu-btn" aria-label="Menú">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Acerca de / Historia -->
+    <section id="sobre-nosotros" class="section-padding" style="margin-top: 5.5rem;">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-visual">
+                    <div class="about-card">
+                        <div class="about-owner-img">
+                            <svg viewBox="0 0 100 100" class="fashion-illustration">
+                                <circle cx="50" cy="50" r="48" fill="var(--color-bg-card)" stroke="var(--color-accent-light)" stroke-width="2" />
+                                <path d="M50 30 C58 30, 62 38, 62 44 C62 55, 50 65, 50 65 C50 65, 38 55, 38 44 C38 38, 42 30, 50 30 Z" fill="var(--color-primary-soft)" opacity="0.3"/>
+                                <path d="M25 80 C25 65, 35 55, 50 55 C65 55, 75 65, 75 80 Z" fill="var(--color-accent)" opacity="0.6"/>
+                                <circle cx="50" cy="40" r="10" fill="var(--color-accent)" />
+                            </svg>
+                        </div>
+                        <div class="about-owner-info">
+                            <h4>Yorgely Nohemy Aguilar</h4>
+                            <p class="owner-title">Fundadora y Propietaria</p>
+                            <span class="badge badge-primary">Emprende CITE</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-content">
+                    <span class="section-subtitle">Conoce nuestra historia</span>
+                    <h1 class="about-title" style="font-size: 3rem; line-height: 1.15; margin-bottom: 1.5rem;">Impulsando la moda digital en Comayagua</h1>
+                    <p>Gelys Store nació con el firme propósito de ofrecer ropa moderna y de calidad, superando los límites físicos de las tiendas tradicionales. Observamos cómo el consumidor de hoy valora su tiempo y busca métodos de compra ágiles, cómodos y de confianza sin salir de casa.</p>
+                    <p>Bajo la guía del <strong>Centro de Innovación y Transferencia Tecnológica (CITE) Comayagua</strong>, impulsado por la Alcaldía Municipal y financiado por la <strong>Agencia Española de Cooperación Internacional para el Desarrollo (AECID)</strong>, nos digitalizamos para ofrecerte un servicio de primer nivel, gestión eficiente de inventarios y una pasarela de atención virtual humana y personalizada.</p>
+                    <p>Nuestra visión es seguir expandiendo nuestro alcance digital y proveer tanto a clientes finales en búsqueda de estilo, como a pequeños emprendedores/revendedores locales a través de la venta de fardos de ropa mixta de alta rotación, fortaleciendo el ecosistema comercial de nuestra región.</p>
+                    
+                    <div class="alliance-logos">
+                        <p class="alliance-title">En colaboración con:</p>
+                        <div class="logos-container">
+                            <span class="alliance-tag">CITE Comayagua</span>
+                            <span class="alliance-tag">AECID España</span>
+                            <span class="alliance-tag">Alcaldía Comayagua</span>
+                            <span class="alliance-tag">CDE MIPYME Región Lempa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sidebar del Carrito de Compras (Drawer común) -->
+    <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer-header">
+            <h3>Tu Pedido</h3>
+            <button id="cart-close" class="icon-btn" aria-label="Cerrar">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+        
+        <div class="cart-drawer-content" id="cart-items-container">
+            <!-- Cargado por JS -->
+        </div>
+        
+        <div class="cart-drawer-footer" id="cart-footer">
+            <div class="cart-summary">
+                <div class="summary-line">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal">L 0.00</span>
+                </div>
+                <div class="summary-line highlight">
+                    <span>Total Estimado</span>
+                    <span id="cart-total">L 0.00</span>
+                </div>
+            </div>
+            
+            <form id="order-form" class="order-form">
+                <div class="form-group">
+                    <label for="client-name">Nombre Completo</label>
+                    <input type="text" id="client-name" required placeholder="Ej. Ana Pérez">
+                </div>
+                <div class="form-group">
+                    <label for="client-location">Dirección o Punto de Entrega en Comayagua</label>
+                    <input type="text" id="client-location" required placeholder="Ej. Frente a Plaza Central">
+                </div>
+                <div class="form-group">
+                    <label for="client-notes">Notas / Tallas / Preferencias (Opcional)</label>
+                    <textarea id="client-notes" placeholder="Ej. Vestido Comayagua en talla M, color azul."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i data-lucide="message-square-plus"></i>
+                    <span>Enviar pedido a WhatsApp</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Contacto / Footer -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo footer-logo">
+                    <span class="logo-accent">Gelys</span> Store
+                </a>
+                <p class="footer-desc">Boutique digital de ropa de alta calidad para damas y caballeros. Estilo, tendencia y comodidad a un solo clic de distancia.</p>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <i data-lucide="facebook"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i data-lucide="instagram"></i>
+                    </a>
+                    <a href="https://wa.me/50499000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                        <i data-lucide="phone"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <a href="index.html">Inicio</a>
+                <a href="beneficios.html">Beneficios</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="nosotros.html">Acerca de nosotros</a>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <p>
+                    <i data-lucide="map-pin"></i>
+                    <span>Comayagua, Honduras</span>
+                </p>
+                <p>
+                    <i data-lucide="mail"></i>
+                    <span>contacto@gelysstore.com</span>
+                </p>
+                <p>
+                    <i data-lucide="phone-call"></i>
+                    <span>+504 9900-0000</span>
+                </p>
+                <p>
+                    <i data-lucide="clock"></i>
+                    <span>Atención: Lun - Sáb, 8:00 AM - 6:00 PM</span>
+                </p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom text-center">
+            <div class="container footer-bottom-container">
+                <p>&copy; 2026 Gelys Store. Todos los derechos reservados. Desarrollado por Yorgely Nohemy Aguilar - Emprende CITE.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cargar Lucide Icons desde CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Script principal de la aplicación -->
+    <script src="app.js"></script>
+</body>
+</html>
